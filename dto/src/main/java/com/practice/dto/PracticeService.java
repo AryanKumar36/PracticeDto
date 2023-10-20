@@ -23,9 +23,10 @@ public class PracticeService {
         List<PracticeDto> practiceDtos = new ArrayList<>();
 
         for (Practice practice : practices) {
-            PracticeDto practiceDto = modelMapper.map(Practice.class, PracticeDto.class);
+            PracticeDto practiceDto = modelMapper.map(practice, PracticeDto.class);
             practiceDtos.add(practiceDto);
         }
+
 
         return practiceDtos;
     }
